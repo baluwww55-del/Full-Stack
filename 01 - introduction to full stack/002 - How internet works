@@ -1,1 +1,169 @@
+1. HOW A WEBSITE WORKS
 
+When we enter a website URL in the browser:
+
+User
+  ↓
+Browser
+  ↓
+DNS
+  ↓
+Internet
+  ↓
+Server
+  ↓
+Database
+  ↓
+Server
+  ↓
+Browser
+  ↓
+User
+
+DNS (Domain Name System):
+- DNS converts the domain name into an IP address.
+- Example:
+  Domain → google.com
+  IP → 192.168.x.x (example)
+- The browser uses the IP address to communicate with the server.
+
+SERVER:
+- The server receives the request from the browser.
+- It processes the request and communicates with the database when required.
+- The server sends the required response back to the browser.
+
+DATABASE:
+- Stores application data.
+- The backend/server communicates with the database to store or retrieve data.
+
+
+2. FRONTEND AND BACKEND
+
+FRONTEND:
+- Frontend is the client-side part of a web application.
+- It is what the user can see and interact with.
+- It contains the user interface (UI).
+
+Frontend technologies:
+- HTML
+- CSS
+- JavaScript
+- React
+- Other frontend frameworks/libraries
+
+BACKEND:
+- Backend is the server-side part of a web application.
+- It handles application logic and requests.
+- It communicates with databases.
+- It sends responses to the frontend.
+
+Backend technologies/tools mentioned:
+- Node.js
+- Express
+- Database
+- APIs
+
+
+3. CLIENT AND SERVER
+
+CLIENT:
+- The client is generally the browser/application used by the user.
+- It sends requests to the backend/server.
+
+SERVER:
+- The server receives client requests.
+- It processes the request.
+- It may communicate with the database.
+- It sends the response back to the client.
+
+Basic flow:
+
+Client
+  ↓
+Request
+  ↓
+Backend / Server
+  ↓
+Database
+  ↓
+Backend / Server
+  ↓
+Response
+  ↓
+Client
+
+
+4. API
+
+API = Application Programming Interface
+
+- API is a way for different parts of an application to communicate.
+- The frontend can communicate with the backend through APIs.
+- The backend can communicate with databases and other services.
+
+Example:
+
+Frontend
+   ↓
+  API
+   ↓
+Backend
+   ↓
+Database
+
+The API acts as a communication/interface layer between the frontend and backend.
+
+
+5. FRONTEND + BACKEND + DATABASE
+
+A complete web application can be understood as:
+
+                WEB APPLICATION
+                      |
+          -------------------------
+          |           |           |
+       Frontend    Backend    Database
+          |           |           |
+        HTML        Server      Data
+        CSS         Logic
+        JS          API
+        React       Requests
+
+
+6. BASIC WEB APPLICATION FLOW
+
+1. User interacts with the frontend.
+2. Frontend sends a request to the backend through an API.
+3. Backend processes the request.
+4. Backend communicates with the database if required.
+5. Database returns the required data.
+6. Backend sends the response through the API.
+7. Frontend displays the result to the user.
+
+
+7. MAIN IDEA
+
+Frontend → User Interface
+Backend → Application Logic
+Database → Stores Data
+API → Communication between different parts
+Server → Processes requests and sends responses
+DNS → Converts domain name into an IP address
+
+
+FULL STACK DEVELOPMENT
+
+Full Stack Development involves working with:
+
+Frontend
+   +
+Backend
+   +
+Database
+   +
+APIs
+   +
+Server-side concepts
+
+The goal is to understand how the complete web application works
+from the user's browser to the backend and database.
