@@ -1,1 +1,96 @@
-basics 
+# Full Stack Web Development — Day 1
+
+Today I started learning Full Stack Web Development.
+
+## Full Stack Development
+
+Full Stack Development mainly consists of:
+
+### 1. Frontend
+Frontend is the part of the application that the user sees and interacts with.
+
+Technologies:
+- HTML
+- CSS
+- Tailwind CSS
+- JavaScript
+- DOM
+- React
+- Angular
+
+### 2. Backend
+Backend handles the server-side logic and communication with the database.
+
+Technologies/tools:
+- Node.js
+- Express
+- Database
+- APIs
+- Error handling
+
+### 3. Microservices
+Microservices divide an application into smaller independent services.
+
+Tools/concepts mentioned:
+- Microservices
+- Socket
+- Docker
+
+### 4. DevOps
+DevOps deals with development, deployment and managing applications.
+
+---
+
+# Tools
+
+## Code Editor
+VS Code
+
+## Browser
+Google Chrome
+
+## Terminal
+Used to execute commands and work with the project.
+
+---
+
+# VS Code Shortcuts
+
+Ctrl + Shift + P
+→ Opens Command Palette.
+
+Ctrl + W
+→ Closes the current file/tab.
+
+Ctrl + Tab
+→ Switches between open tabs.
+
+Ctrl + S
+→ Saves the file.
+
+Ctrl + X
+→ Removes/cuts the current line when nothing is selected.
+
+Ctrl + P
+→ Quickly opens a file.
+
+Alt + Up / Down
+→ Moves the current line up or down.
+
+Shift + Alt + Up / Down
+→ Duplicates the current line.
+
+Ctrl + D
+→ Selects the next occurrence of the selected word.
+
+---
+
+# Today's Learning
+
+- Started Full Stack Web Development.
+- Learned the basic parts of Full Stack Development.
+- Learned about Frontend and Backend.
+- Got an introduction to Microservices and DevOps.
+- Started using VS Code.
+- Learned basic VS Code shortcuts.
+- Learned how different development tools are used in a project.
