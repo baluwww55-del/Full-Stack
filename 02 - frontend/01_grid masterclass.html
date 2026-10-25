@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid masterclass</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        padding: 32px 20px 48px;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #f4f7fb;
+        color: #1f2937;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 32px;
+        color: #111827;
+      }
+
+      .demo-section {
+        max-width: 1100px;
+        margin: 0 auto 28px;
+        padding: 20px 18px 28px;
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+      }
+
+      h2 {
+        margin: 0 0 18px;
+        color: #1d4ed8;
+      }
+
+      .demo-grid {
+        display: grid;
+        min-height: 180px;
+        background: linear-gradient(135deg, #e0f2fe, #dbeafe);
+        border: 2px solid #1e3a8a;
+        border-radius: 10px;
+        padding: 16px;
+        gap: 16px;
+      }
+
+      .box {
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, #2563eb, #3b82f6);
+        color: #fff;
+        border-radius: 10px;
+        font-size: 1.2rem;
+        font-weight: 700;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.2);
+      }
+
+      .grid-basics {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 90px);
+      }
+
+      .grid-different {
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: repeat(2, 90px);
+      }
+
+      .grid-gaps {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      }
+
+      .grid-placement {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .grid-placement .box:nth-child(1) {
+        grid-column: 1 / span 2;
+      }
+
+      .grid-placement .box:nth-child(2) {
+        grid-row: 1 / span 2;
+      }
+
+      .grid-placement .box:nth-child(5) {
+        grid-column: 2 / span 2;
+      }
+
+      .grid-template-areas {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+          "header header header"
+          "side main main"
+          "side footer footer";
+      }
+
+      .grid-template-areas .box:nth-child(1) {
+        grid-area: header;
+      }
+      .grid-template-areas .box:nth-child(2) {
+        grid-area: side;
+      }
+      .grid-template-areas .box:nth-child(3) {
+        grid-area: main;
+      }
+      .grid-template-areas .box:nth-child(4) {
+        grid-area: footer;
+      }
+
+      .grid-auto-fit {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      }
+
+      .grid-alignment {
+        height: 260px;
+        grid-template-columns: repeat(3, 120px);
+        justify-content: space-between;
+        align-content: center;
+      }
+
+      .grid-nested {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+      }
+
+      .nested-card {
+        background: linear-gradient(135deg, #0f766e, #14b8a6);
+        border-radius: 10px;
+        padding: 12px;
+      }
+
+      .nested-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        height: 100%;
+      }
+
+      .nested-grid span {
+        display: grid;
+        place-items: center;
+        background: rgba(255, 255, 255, 0.18);
+        border-radius: 8px;
+        color: #fff;
+        font-weight: 700;
+      }
+
+      .grid-auto-flow {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-flow: dense;
+      }
+
+      .grid-auto-flow .wide {
+        grid-column: span 2;
+      }
+
+      .grid-auto-flow .tall {
+        grid-row: span 2;
+        min-height: 110px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Grid Masterclass</h1>
+
+    <section class="demo-section">
+      <h2>Grid basics</h2>
+      <div class="demo-grid grid-basics">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+      </div>
+    </section>
+
+    <section class="demo-section">
+      <h2>Grid with different column sizes</h2>
+      <div class="demo-grid grid-different">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+      </div>
+    </section>
+
+    <section class="demo-section">
+      <h2>Grid with gaps</h2>
+      <div class="demo-grid grid-gaps">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+      </div>
+    </section>
+
+    <section class="demo-section">
+      <h2>Grid item placement</h2>
+      <div class="demo-grid grid-placement">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+      </div>
+    </section>
+
+    <section class="demo-section">
+      <h2>Grid template areas</h2>
+      <div class="demo-grid grid-template-areas">
+        <div class="box">Header</div>
+        <div class="box">Sidebar</div>
+        <div class="box">Main</div>
+        <div class="box">Footer</div>
+      </div>
+    </section>
+
+    <section class="demo-section">
+      <h2>Auto fit minimax</h2>
+      <div class="demo-grid grid-auto-fit">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+      </div>
+    </section>
+
+    <section class="demo-section">
+      <h2>Alignment justification</h2>
+      <div class="demo-grid grid-alignment">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+      </div>
+    </section>
+
+    <section class="demo-section">
+      <h2>Nested grid</h2>
+      <div class="demo-grid grid-nested">
+        <div class="nested-card">
+          <div class="nested-grid">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+          </div>
+        </div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+      </div>
+    </section>
+
+    <section class="demo-section">
+      <h2>Grid with auto process</h2>
+      <div class="demo-grid grid-auto-flow">
+        <div class="box wide">1</div>
+        <div class="box">2</div>
+        <div class="box tall">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box wide">6</div>
+      </div>
+    </section>
+  </body>
+</html>
