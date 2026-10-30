@@ -1,0 +1,193 @@
+# Tailwind CSS – Installation and Setup
+
+## 1. What is Tailwind CSS?
+
+Tailwind CSS is a utility-first CSS framework used to design and style websites directly inside HTML using predefined utility classes.
+
+Instead of writing separate CSS rules for every element, we can apply Tailwind classes directly to HTML elements.
+
+### Example
+
+Traditional CSS:
+
+```html
+<h1 class="heading">Hello World</h1>
+```
+
+```css
+.heading {
+    color: blue;
+    font-size: 30px;
+    font-weight: bold;
+}
+```
+
+Using Tailwind CSS:
+
+```html
+<h1 class="text-blue-500 text-3xl font-bold">
+    Hello World
+</h1>
+```
+
+---
+
+## 2. Features of Tailwind CSS
+
+* Utility-first CSS framework.
+* Responsive design support.
+* Easy customization.
+* Faster UI development.
+* Reusable utility classes.
+* No need to write custom CSS for every styling requirement.
+
+---
+
+## 3. Using Tailwind CSS Through CDN
+
+CDN stands for Content Delivery Network.
+
+It allows us to use Tailwind CSS in an HTML file without installing it locally.
+
+### Step 1: Create an HTML file
+
+Create a file named `index.html`.
+
+### Step 2: Add the Tailwind CDN script
+
+Add the following inside the `<head>` section:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+```
+
+### Step 3: Write HTML using Tailwind classes
+
+Complete example:
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tailwind CSS Demo</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="bg-gray-100">
+
+    <div class="text-center mt-10">
+
+        <h1 class="text-4xl font-bold text-blue-600">
+            Hello Tailwind CSS!
+        </h1>
+
+        <p class="text-gray-700 mt-4 text-lg">
+            Learning Tailwind CSS is fun.
+        </p>
+
+        <button class="bg-blue-500 text-white px-6 py-2 rounded-lg mt-5 hover:bg-blue-700">
+            Get Started
+        </button>
+
+    </div>
+
+</body>
+</html>
+```
+
+---
+
+## 4. Important Tailwind CSS Classes
+
+| Class               | Purpose                     |
+| ------------------- | --------------------------- |
+| `text-center`       | Aligns text to the center   |
+| `text-red-500`      | Sets text color to red      |
+| `text-3xl`          | Sets large text size        |
+| `font-bold`         | Makes text bold             |
+| `bg-blue-500`       | Sets background color       |
+| `p-4`               | Adds padding                |
+| `m-4`               | Adds margin                 |
+| `mt-5`              | Adds top margin             |
+| `rounded-lg`        | Adds rounded corners        |
+| `flex`              | Enables Flexbox             |
+| `justify-center`    | Centers items horizontally  |
+| `items-center`      | Aligns items vertically     |
+| `hover:bg-blue-700` | Changes background on hover |
+
+---
+
+## 5. Installing Tailwind CSS Using npm
+
+For a proper development project, Tailwind CSS can be installed using npm.
+
+### Step 1: Initialize the project
+
+```bash
+npm init -y
+```
+
+### Step 2: Install Tailwind CSS
+
+```bash
+npm install tailwindcss @tailwindcss/cli
+```
+
+### Step 3: Create an input CSS file
+
+Create `src/input.css`:
+
+```css
+@import "tailwindcss";
+```
+
+### Step 4: Start the Tailwind CLI
+
+```bash
+npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
+```
+
+### Step 5: Link the generated CSS file
+
+Add this inside the HTML `<head>`:
+
+```html
+<link href="./src/output.css" rel="stylesheet">
+```
+
+Now Tailwind CSS is ready for your local development project.
+
+---
+
+## 6. CDN vs npm Installation
+
+| CDN                                 | npm                                     |
+| ----------------------------------- | --------------------------------------- |
+| Quick setup                         | Project-based setup                     |
+| No local installation required      | Requires Node.js and npm                |
+| Useful for learning and experiments | Suitable for production workflows       |
+| Browser-based compilation           | Generates CSS through the build process |
+
+**Note:** Tailwind's browser CDN is intended for development and learning, not production deployment.
+
+---
+
+## 7. What I Learned Today
+
+1. Introduction to Tailwind CSS.
+2. Understanding the utility-first approach.
+3. Using Tailwind CSS through CDN.
+4. Adding Tailwind classes directly in HTML.
+5. Understanding commonly used utility classes.
+6. Installing Tailwind CSS using npm.
+7. Setting up Tailwind CSS with the CLI.
+
+---
+
+## Conclusion
+
+Tailwind CSS makes website styling faster and more flexible through utility classes. Today, I learned how to set it up using CDN and npm and how to apply basic styling directly in HTML.
